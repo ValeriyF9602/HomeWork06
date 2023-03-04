@@ -9,3 +9,23 @@
 1, -7, 567, 89, 223-> 3
 
 *****************************************************/
+
+
+int[] InputArray(string text)
+{
+    Console.WriteLine(text);
+    return Array.ConvertAll(Console.ReadLine()!.Split(), int.Parse);
+}
+
+void GreaterThanZero(int[] array)
+{
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] > 0) count++;
+    }
+    System.Console.WriteLine($"Количество чисел больше нуля: {count}");
+}
+
+var myArray = InputArray("Введите числа через пробел");
+GreaterThanZero(myArray);
